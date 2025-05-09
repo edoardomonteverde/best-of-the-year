@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Best Songs</title>
+</head>
+<body>
+    <h1>Best Songs</h1>
+    <ul>
+        <!-- Ciclo attraverso la lista "songs" -->
+        <li th:each="song : ${songs}" th:text="${song.title}"></li>
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

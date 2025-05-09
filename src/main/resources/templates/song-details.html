@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Song Details</title>
+</head>
+<body>
+    <h1>Song Details</h1>
+    <!-- Se la canzone esiste -->
+    <div th:if="${song != null}">
+        <p>Title: <span th:text="${song.title}"></span></p>
+    </div>
+
+    <!-- Se la canzone non esiste -->
+    <div th:if="${song == null}">
+        <p>Song not found!</p>
+    </div>
+
+    <a href="/songs">Back to Songs List</a>
+</body>
+</html>
