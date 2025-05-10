@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="itemList(sectionTitle, items, urlPrefix)">
+        <main class="container mt-5 text-center">
+            <h1 class="mb-4" th:text="${sectionTitle}">Sezione</h1>
+
+            <ul class="list-group mx-auto" style="max-width: 500px;">
+                <li th:each="item : ${items}" class="list-group-item">
+                    <a th:href="@{${urlPrefix} + '/' + ${item.id}}" th:text="${item.title}">Titolo</a>
+                </li>
+            </ul>
+
+            <a href="/" class="btn btn-link mt-4">← Back to Home</a>
+        </main>
+    </div>
+</body>
+</html>

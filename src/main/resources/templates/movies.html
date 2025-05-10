@@ -1,14 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Best Movies</title>
+    <head th:replace="fragments/head :: head('Best Movies')"></head>
 </head>
 <body>
-    <h1>Best Movies</h1>
-    <ul>
-        <!-- Ciclo attraverso la lista "movies" -->
-        <li th:each="movie : ${movies}" th:text="${movie.title}"></li>
-    </ul>
-    <a href="/">Back to Home</a>
+    <div th:replace="fragments/navbar :: navbar"></div>
+    <div th:replace="fragments/list :: itemList('Best Movies', ${movies}, '/movies')"></div>
+    
 </body>
 </html>

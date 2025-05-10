@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Movie Details</title>
+    <head th:replace="fragments/head :: head('Movie Details')"></head>
 </head>
 <body>
+    <div th:replace="fragments/navbar :: navbar"></div>
     <h1>Movie Details</h1>
     <!-- Se il film esiste -->
     <div th:if="${movie != null}">

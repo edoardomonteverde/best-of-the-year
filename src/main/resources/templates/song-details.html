@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Song Details</title>
+    <head th:replace="fragments/head :: head('Song Details')"></head>
 </head>
 <body>
+    <div th:replace="fragments/navbar :: navbar"></div>
     <h1>Song Details</h1>
     <!-- Se la canzone esiste -->
     <div th:if="${song != null}">

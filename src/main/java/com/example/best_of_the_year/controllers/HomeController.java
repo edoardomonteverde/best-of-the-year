@@ -54,7 +54,7 @@ public class HomeController {
         model.addAttribute("name", name);
         return "home";
     }
-    
+
     private List<Movie> getBestMovies() {
     // Creazione degli oggetti Movie
     Movie movie1 = new Movie(1, "Inception");
@@ -96,7 +96,7 @@ public class HomeController {
 @GetMapping("/songs")
 public String songs(Model model) {
     List<Song> songs = getBestSongs();
-    model.addAttribute("Songs", songs);
+    model.addAttribute("songs", songs);
     return "songs";
 }
 

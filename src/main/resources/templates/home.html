@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Best of the Year</title>
+    <head th:replace="fragments/head :: head('Best of The Year')"></head>
 </head>
 <body>
-    <h1>Best of the year by <span th:text="${name}">Default Name</span></h1>
+    <header>
+        <div th:replace="fragments/navbar :: navbar"></div>
+    </header>
+
+    <main class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <!-- Title -->
+        <h1 th:text="'Best of by ' + ${name}">Best of by ...</h1>
+
+        <!-- Placeholder Image -->
+        <div class="d-flex justify-content-center align-items-center bg-warning border mt-2" style="height: 300px; width: 600px;">
+            <span class="text-muted">Image</span>
+        </div>
+
+        <!-- Description -->
+        <div class="d-flex justify-content-center align-items-center border " style="height: 300px; width: 600px;">
+            <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at felis vel massa malesuada dapibus.</p>
+        </div>
+    </main>
+    
 </body>
 </html>
